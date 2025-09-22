@@ -1,5 +1,3 @@
-Absolutely, Hesham. Based on everything you’ve built so far—your **first Go CLI tool** with commands like `greet`, `sum`, and `time`, and your milestone of learning Go and CLI concepts—here’s a clean, professional `README.md` you can push to GitHub right away:
-
 # My First Go CLI Tool 🚀
 
 A lightweight command‑line application written in **Go**, built as my first step into the world of CLI development.  
