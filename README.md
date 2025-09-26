@@ -21,7 +21,7 @@ This project started with a simple skeleton and currently supports three core co
 
 Clone the repository:
 ```bash
-git clone https://github.com/yourusername/my-first-cli-tool.git
+https://github.com/HeshamAbuShaban/my-first-go-cli-tool.git
 cd my-first-cli-tool
 ```
 
