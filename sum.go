@@ -1,25 +1,30 @@
 package main
 
 import (
-  "fmt"
-  "strconv"
+    "flag"
+    "fmt"
 )
 
-
+// cmdSum handles the "sum" subcommand with flags
 func cmdSum(args []string) {
-	if len(args) < 2 {
-		fmt.Println("Usage: mycli sum <a> <b>")
-		return
-	}
-	a, err := strconv.Atoi(args[0])
-	if err != nil {
-		fmt.Println("Invalid number:", args[0])
-		return
-	}
-	b, err := strconv.Atoi(args[1])
-	if err != nil {
-		fmt.Println("Invalid number:", args[1])
-		return
-	}
-	fmt.Println(a + b)
+    sumCmd := flag.NewFlagSet("sum", flag.ExitOnError)
+
+    a := sumCmd.Int("a", 0, "First integer to add")
+    b := sumCmd.Int("b", 0, "Second integer to add")
+
+    // Custom usage
+    sumCmd.Usage = func() {
+        fmt.Println("Usage: mycli sum [options]")
+        fmt.Println("\nOptions:")
+        sumCmd.PrintDefaults()
+    }
+
+    err := sumCmd.Parse(args)
+    if err != nil {
+        return
+    }
+
+    result := *a + *b
+    fmt.Printf("%d + %d = %d\n", *a, *b, result)
 }
+
