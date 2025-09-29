@@ -22,7 +22,7 @@ This project started with a simple skeleton and currently supports three core co
 Clone the repository:
 ```bash
 git clone https://github.com/HeshamAbuShaban/my-first-go-cli-tool.git
-cd my-first-cli-tool
+cd my-first-go-cli-tool
 ```
 
 Build the binary:
